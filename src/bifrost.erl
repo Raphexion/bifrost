@@ -678,7 +678,7 @@ response_code_string(_) -> "N/A".
 
 %% Taken from jungerl/ftpd
 
-file_info_to_string(Info) ->
+file_info_to_string(Info=#file_info{}) ->
     format_type(Info#file_info.type) ++
         format_access(Info#file_info.mode) ++ " " ++
         format_number(type_num(Info#file_info.type), 2, $ ) ++ " " ++
